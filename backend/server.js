@@ -1,13 +1,14 @@
 var express = require("express");
 var app = express();
 
-const key = "984b6dd9-b9c8-4542-b220-0731620b5f7d";
+const key = "key-goes-here";
 
 var Rail = require("national-rail-darwin");
 var rail = new Rail(key);
 
 app.listen(3000, () => {
   console.log("Server running on port 3000");
+  console.log("Make sure the key has been updated");
 });
 
 app.get("/depatures-simple", (req, res, next) => {
